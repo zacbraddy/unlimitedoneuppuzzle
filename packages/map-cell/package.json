@@ -1,0 +1,21 @@
+{
+  "name": "@repo/map-cell",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest",
+    "test:watch": "vitest --watch"
+  },
+  "exports": {
+    "./cell": {
+      "types": "./src/cell.ts",
+      "default": "./dist/cell.js"
+    }
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "typescript": "latest",
+    "vitest": "^2.0.4"
+  }
+}
