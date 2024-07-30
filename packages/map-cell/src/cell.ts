@@ -13,7 +13,7 @@ export class Cell {
 
   constructor(position: Position) {
     this.position = position;
-    this.links = {};
+    this.links = { up: undefined };
   }
 
   addUp(newUp: Cell) {
