@@ -122,6 +122,41 @@ importers:
         specifier: ^5.3.3
         version: 5.3.3
 
+  packages/game-map:
+    dependencies:
+      '@repo/map-cell':
+        specifier: workspace:*
+        version: link:../map-cell
+    devDependencies:
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
+      typescript:
+        specifier: latest
+        version: 5.5.4
+      vitest:
+        specifier: ^2.0.4
+        version: 2.0.4
+
+  packages/map-builder:
+    dependencies:
+      '@repo/game-map':
+        specifier: workspace:*
+        version: link:../game-map
+      '@repo/map-cell':
+        specifier: workspace:*
+        version: link:../map-cell
+    devDependencies:
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
+      typescript:
+        specifier: latest
+        version: 5.5.4
+      vitest:
+        specifier: ^2.0.4
+        version: 2.0.4
+
   packages/map-cell:
     devDependencies:
       '@repo/typescript-config':

@@ -1,17 +1,21 @@
 {
-  "name": "@repo/map-cell",
+  "name": "@repo/map-builder",
   "type": "module",
   "scripts": {
-    "build": "tsc",
     "dev": "tsc --watch",
+    "build": "tsc",
     "test": "vitest",
     "test:watch": "vitest --watch"
   },
   "exports": {
-    ".": {
-      "types": "./src/cell.ts",
-      "default": "./dist/cell.js"
+    "./map-builder": {
+      "types": "./src/map-builder.ts",
+      "default": "./dist/map-builder.js"
     }
+  },
+  "dependencies": {
+    "@repo/game-map": "workspace:*",
+    "@repo/map-cell": "workspace:*"
   },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",
